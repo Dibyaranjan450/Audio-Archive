@@ -1,6 +1,8 @@
 # Audio Archive
 
-![Screenshot Img](./Screenshot.png)
+![Screenshot Img](./screenshot_01.png)
+![Screenshot Img](./screenshot_02.png)
+![Screenshot Img](./screenshot_03.png)
 
 ## Usage
 
