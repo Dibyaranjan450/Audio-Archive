@@ -7,13 +7,13 @@
 Clone it :
 
 ```
-$ git clone https://github.com/Dibyaranjan450/React-Events.git
+$ git clone https://github.com/Dibyaranjan450/Audio-Archive.git
 ```
 
 Visit the page at :
 
 ```
-https://dibyaranjan450.github.io/React-Events/
+https://audioarchive.netlify.app/
 ```
 
 ## Contributor
