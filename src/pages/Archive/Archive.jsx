@@ -11,7 +11,7 @@ function Archive({ audioTrackArr }) {
   function onMenuClick(id, openVal) {
     const clonedMusicTrack = musicTrackArr.map((music) => ({
       ...music,
-      isMenuOpen: id === music.uuid ? openVal : music.isMenuOpen,
+      isMenuOpen: id === music.uuid ? openVal : false,
     }));
     setMusicTrackArr(clonedMusicTrack);
   }
