@@ -5,7 +5,7 @@ import { TfiDownload } from "react-icons/tfi";
 import { LiaExclamationCircleSolid } from "react-icons/lia";
 
 function TrackMenuOption({ audioTrack, onMenuClick }) {
-  console.log(audioTrack);
+  // console.log(audioTrack);
 
   const expandVariants = {
     initial: {
@@ -20,11 +20,20 @@ function TrackMenuOption({ audioTrack, onMenuClick }) {
     },
   };
 
-  function downloadAudio() {
+  async function downloadAudio() {
+    const response = await fetch(audioTrack.audioFile);
+
+    //// Converting responce to blob File ////
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+
     const link = document.createElement("a");
-    link.href = audioTrack.audioFile;
-    link.download = audioTrack.title + " by " + audioTrack.performedBy;
+    link.href = url;
+    link.download = `${audioTrack.title} by ${audioTrack.performedBy}.mp3`;
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
   }
 
   return (
@@ -41,6 +50,7 @@ function TrackMenuOption({ audioTrack, onMenuClick }) {
         right: 0,
         display: "flex",
         justifyContent: "flex-end",
+        zIndex: 1,
       }}
     >
       <div className="w-full md:w-[50%] h-full bg-[#000000CC] md:bg-[#00000080] rounded-[32px] md:rounded-tl-none md:rounded-bl-none">
