@@ -67,7 +67,7 @@ function MusicCardHolder({ musicTrackArr, setSelectedTrack, onMenuClick }) {
             )}
           </div>
 
-          <div className="flex justify-between items-center p-[18px] bg-[#00000080] rounded-[18px]">
+          <div className="flex justify-between items-center p-[18px] rounded-[18px] bg-[#00000033] backdrop-blur-4">
             <h2 className="text-sm font-semibold grid gap-[2px]">
               {music.title}
               <span className="text-xs font-medium flex items-center gap-[3px]">
