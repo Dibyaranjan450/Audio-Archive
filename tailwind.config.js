@@ -26,6 +26,9 @@ export default {
         custom: "0px 0px 20px 2px #DC143C",
         customWhite: "0px 0px 10px 0px #fff",
       },
+      backdropBlur: {
+        "4": "4px",
+      },
       backgroundImage: {
         hero: "url('assets/images/banner.png')",
       },
